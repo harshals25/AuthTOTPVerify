@@ -238,7 +238,7 @@ fun AddSecretDialog(
     val activity = LocalContext.current
 
     // QR code scanner
-    val scanner by rememberSaveable {
+    val scanner by remember {
         mutableStateOf(
             GmsBarcodeScanning.getClient(
                 activity,
