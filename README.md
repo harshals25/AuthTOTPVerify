@@ -1,6 +1,6 @@
 # TOTP verification app
 
-A simple Android app that generates TOTP codes using Kotlin, Jetpack Compose.
+A simple Android app that generates TOTP codes using Kotlin, Jetpack Compose and [a library to generate TOTP codes](https://github.com/marcelkliemannel/kotlin-onetimepassword).
 Supports manual secret, issuer entry and QR scanning, updates codes every 30 seconds, and shows a progress bar per entry.
 
 ## Features
