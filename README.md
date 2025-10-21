@@ -6,9 +6,9 @@ Supports manual secret, issuer entry and QR scanning, updates codes every 30 sec
 ## Features
 
 - Add secrets manually or by scanning an otpauth:// QR.
-- Multiple entries shown in a list with
+- Multiple entries shown in a list
 - 6-digit TOTP code with the issuer name at the top of the code
-- Seconds remaining in the current window using a progress bar
+- Seconds remaining in the current window using a progress bar for each code
 - Secrets are formatted/cleaned (spaces removed, uppercased).
 - Handles without crashing if no issuer is present
 - Duplicate secret protection.
