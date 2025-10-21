@@ -23,7 +23,7 @@ Supports manual secret, issuer entry and QR scanning, updates codes every 30 sec
 
 ## Installation
 
-1. Clone the repository: git clone [https://github.com/harshals25/FetchDisplayList](https://github.com/harshals25/AuthTOTPVerify)
+1. Clone the repository: git clone [https://github.com/harshals25/AuthTOTPVerify](https://github.com/harshals25/AuthTOTPVerify)
 2. Open the project in Android Studio.
 3. Build and run the project on an Android device or emulator.
 
