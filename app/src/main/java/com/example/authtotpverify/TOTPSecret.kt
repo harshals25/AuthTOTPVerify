@@ -1,3 +1,7 @@
+// This was just to get the project working
+// leaving it in the project just to show the flow when view model flow is not used
+// Will not be triggered unless MainActivity.kt code is changed to execute this instead
+
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -60,11 +64,6 @@ import dev.turingcomplete.kotlinonetimepassword.TimeBasedOneTimePasswordGenerato
 import kotlinx.coroutines.delay
 import org.apache.commons.codec.binary.Base32
 import java.util.concurrent.TimeUnit
-
-
-// This was just to get the project working
-// leaving it in the project just to show the flow when view model flow is not used
-// Will not be triggered unless MainActivity.kt code is changed to execute this instead
 
 @Composable
 fun TotpQuickDemo(

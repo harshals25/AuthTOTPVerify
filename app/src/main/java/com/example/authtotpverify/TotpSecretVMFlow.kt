@@ -233,12 +233,12 @@ fun AddSecretDialog(
     onScanQr: (userSecret: String, userIssuer: String) -> Unit,
     onDismiss: () -> Unit
 ) {
-    var currentUserSecret by remember { mutableStateOf("") }
-    var currentUserIssuer by remember { mutableStateOf("") }
+    var currentUserSecret by rememberSaveable { mutableStateOf("") }
+    var currentUserIssuer by rememberSaveable { mutableStateOf("") }
     val activity = LocalContext.current
 
-    // QR code scanner logic
-    val scanner by remember {
+    // QR code scanner
+    val scanner by rememberSaveable {
         mutableStateOf(
             GmsBarcodeScanning.getClient(
                 activity,
@@ -251,6 +251,7 @@ fun AddSecretDialog(
 
     val canSave = currentUserSecret.isNotEmpty()
 
+    // Showing an alert dialog to either let user enter info or scan a QR code
     AlertDialog(onDismissRequest = onDismiss, title = { Text("Add a new secret") }, text = {
         Column(
             verticalArrangement = Arrangement.spacedBy(6.dp),

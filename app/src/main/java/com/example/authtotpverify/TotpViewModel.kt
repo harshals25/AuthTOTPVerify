@@ -22,7 +22,7 @@ class TotpViewModel(periodSecondsInterval: Int, codeDigits: Int) : ViewModel() {
     val periodSeconds = periodSecondsInterval
     val digits = codeDigits
 
-    // starting the clock as soon as we initiate the viewModel
+    // starting the clock as soon as we initialize the viewModel
     init {
         viewModelScope.launch {
             while (isActive) {
@@ -35,7 +35,7 @@ class TotpViewModel(periodSecondsInterval: Int, codeDigits: Int) : ViewModel() {
                     val e = _userEntries[i]
                     // If a new 30s window just started, regenerate this entry’s code
                     val newCode = if (sr == periodSeconds && e.keyBytes.isNotEmpty()) {
-                        e.generator.generate()          // only at :00/:30
+                        e.generator.generate()          // only at :00 or :30
                     } else {
                         e.code
                     }
